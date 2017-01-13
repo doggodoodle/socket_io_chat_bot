@@ -40,9 +40,9 @@ io.on('connection', function(socket){
                 textChunk = chunk.toString();// buffer to string
 
                 io.sockets.emit('newmsg', datam);
-                datam.message = "Riskex Output: "+textChunk;
+                datam.message = "Bot Output: "+textChunk;
                 console.log("Python returned 1: " +textChunk);
-                datam.user = "RiskexBOT";
+                datam.user = "REXBOT";
                 io.sockets.emit('newmsg', datam);
             });
             //console.log("Python returned 2: " +textChunk);
@@ -61,10 +61,10 @@ io.on('connection', function(socket){
       console.log(socket.toString()+": "+msg);
       io.sockets.emit('chat message', io+": "+msg);
 
-      if (msg === "/riskex buy") {
+      if (msg === "/rex buy") {
           io.sockets.emit('chat message', "............."+socket.toString()+", You wanna buy?");
       }
-      if (msg === "/riskex sell") {
+      if (msg === "/rex sell") {
           io.sockets.emit('chat message', "............."+socket.toString()+", You wanna buy?");
       }
   });
